@@ -52,7 +52,7 @@ const Privacy = () => {
               <li><strong>Qwen</strong> — Alibaba Cloud</li>
             </ul>
             <p className="mt-3">
-              Each provider may retain prompts and responses for a short period for abuse detection. None of them use your data to train their models when accessed through their commercial API (the relevant policy for OpenAI, Anthropic, and Google explicitly disclaims training-on-API-data; we verify these policies quarterly). If a particular provider's policy changes such that they may use API data for training, we will update this list and notify users.
+              Provider data retention and training policies vary. OpenRouter exposes provider-level data policies and routing controls; where no-training commercial/API settings are available, we configure routing to prefer them. Some providers may retain prompts and responses for abuse detection, safety, or service operations. We verify these policies quarterly and update this list when provider handling changes.
             </p>
             <p className="mt-3">
               <strong>Search providers (Deep Dive tier only):</strong> If you use the optional web-augmented "Deep Dive" analysis, your search query is sent to Tavily and/or DuckDuckGo to retrieve live market data.

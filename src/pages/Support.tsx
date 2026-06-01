@@ -55,7 +55,7 @@ const Support = () => {
       id: 'idea-confidentiality',
       category: 'security' as const,
       question: 'Is my startup idea kept confidential?',
-      answer: 'Absolutely. We take data privacy seriously. Your startup ideas and analysis results are encrypted and never shared with third parties. We follow strict data protection guidelines to ensure your information remains secure.'
+      answer: 'Absolutely. We take data privacy seriously. Your startup ideas and analysis results are encrypted in transit and shared only with the AI, hosting, and support providers needed to operate the service, as disclosed in our Privacy Policy. We do not sell your idea content or use it for advertising.'
     },
     {
       id: 'who-can-use-platform',
