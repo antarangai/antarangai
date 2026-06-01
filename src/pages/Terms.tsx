@@ -41,7 +41,7 @@ const Terms = () => {
 
             <h3 className="text-xl font-semibold text-gray-900 pt-4">Third-Party Services</h3>
             <p>
-              AntarangAI integrates third-party services to function: e.g., we use OpenAI GPT-4 via OpenRouter to generate the idea analysis, Razorpay to process payments, and SMS/email providers for OTP verification. These providers are vetted, and we share only the necessary data with them (for example, your idea description to the AI model, or your email/phone to the OTP service). By using our Service, you agree to the use of these third-party services as part of our platform. We are not responsible for any third-party outages or breaches, but we strive to ensure they adhere to strict data protection standards.
+              AntarangAI integrates third-party services to function: e.g., we route AI analysis through OpenRouter to supported model providers, use Razorpay to process payments, and use SMS/email providers for OTP verification. These providers are vetted, and we share only the necessary data with them (for example, your idea description to the AI model provider, or your email/phone to the OTP service). By using our Service, you agree to the use of these third-party services as part of our platform. We are not responsible for any third-party outages or breaches, but we strive to ensure they adhere to strict data protection standards.
             </p>
 
             <h3 className="text-xl font-semibold text-gray-900 pt-4">Limitations of Liability</h3>
@@ -72,4 +72,3 @@ const Terms = () => {
 };
 
 export default Terms;
-

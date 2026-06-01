@@ -7,83 +7,123 @@ const Privacy = () => {
       <Navbar />
       <div className="flex-grow pt-32 pb-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-4xl mx-auto">
-          <h1 className="text-4xl font-bold text-gray-900 mb-8">Privacy Policy</h1>
-          
+          <h1 className="text-4xl font-bold text-gray-900 mb-2">Privacy Policy</h1>
+          <p className="text-sm text-gray-500 mb-8">Last updated: 1 June 2026</p>
+
           <div className="prose prose-lg max-w-none text-gray-600 space-y-6">
             <p>
-              Your privacy is important to us. This Privacy Policy explains what information AntarangAI collects, how we use it, and your rights regarding your personal data. We are committed to protecting your data and comply with applicable Indian data protection laws, including the Information Technology Act and the Digital Personal Data Protection Act, 2023.
+              AntarangAI ("we", "us", "our") provides an AI-powered idea-validation product for Indian founders. This Privacy Policy explains what information we collect, what we do with it, who we share it with, and your rights. We comply with the Indian Information Technology Act, 2000 (including the SPDI Rules, 2011), the Digital Personal Data Protection Act, 2023 (DPDP Act), the EU General Data Protection Regulation (GDPR) for users in the EU/EEA, and the California Consumer Privacy Act (CCPA/CPRA) for California residents.
             </p>
 
-            <h3 className="text-xl font-semibold text-gray-900 pt-4">1. Information We Collect</h3>
-            <p>We only collect information that is necessary to provide and improve our Service:</p>
+            <h3 className="text-xl font-semibold text-gray-900 pt-4">1. Information we collect</h3>
             <ul className="list-disc pl-5 space-y-2">
-              <li><strong>Account Information:</strong> When you register, we collect personal identifiers such as your name (optional), email address and/or phone number for account creation and unique login. If you sign in via Google or Apple, we receive your basic profile info (like email and name) from those providers. We also securely store authentication credentials and your user settings.</li>
-              <li><strong>Idea Content:</strong> When you use AntarangAI’s analysis features, we collect the details of your startup idea that you provide – e.g. the title, description, industry, stage, budget range, and target region for your idea. We also store the AI-generated analysis results for your idea. Your idea inputs and the AI outputs are treated as confidential user content.</li>
-              <li><strong>Usage Data:</strong> We automatically collect certain technical information when you use the app, such as log data, device type, browser type, IP address, and timestamps to monitor usage and debug issues.</li>
-              <li><strong>Payment Information:</strong> If you upgrade to premium features, our payment processor (Razorpay) will collect your payment details. We do not see or store your full financial information.</li>
-              <li><strong>Communication Data:</strong> If you contact us for support, we collect the information you provide to assist you.</li>
+              <li><strong>Account information:</strong> name (optional), email address, phone number, Apple/Google account identifier (if you use Sign in with Apple / Google), encrypted password hash, account creation date.</li>
+              <li><strong>Idea content:</strong> the title, description, industry, business stage, budget range, and target region of every idea you submit; the personas selected for a Virtual Focus Group debate; the debate transcript; and the AI-generated analysis report. <strong>This text is sent to third-party AI providers (see Section 3) — read that section carefully if any of this content is sensitive or proprietary.</strong></li>
+              <li><strong>Usage data:</strong> log lines, device type, OS version, app version, IP address, timestamps, crash reports. Used for debugging, abuse prevention, and improving reliability.</li>
+              <li><strong>Payment information:</strong> if you subscribe to a paid tier, our payment processor (Razorpay) collects your payment instrument details. We never see or store full card numbers, UPI handles, or bank details.</li>
+              <li><strong>Support communications:</strong> messages and attachments you send to our support team.</li>
             </ul>
 
-            <h3 className="text-xl font-semibold text-gray-900 pt-4">2. How We Use Your Information</h3>
-            <p>We use the collected information to:</p>
+            <h3 className="text-xl font-semibold text-gray-900 pt-4">2. How we use your information</h3>
             <ul className="list-disc pl-5 space-y-2">
-              <li>Provide the Service and generate AI analysis results.</li>
-              <li>Improve and develop the service by analyzing aggregated usage patterns.</li>
-              <li>Process premium subscriptions and manage accounts.</li>
-              <li>Communicate regarding service updates or support.</li>
-              <li>Comply with legal obligations and enforce security.</li>
+              <li>Provide the core Service: persona generation, idea analysis, focus-group debate, and report synthesis.</li>
+              <li>Maintain your account, authenticate sessions, and enforce usage limits (e.g. the free-tier analysis cap).</li>
+              <li>Process payments via Razorpay for subscriptions.</li>
+              <li>Respond to support requests, security incidents, and abuse reports.</li>
+              <li>Improve the product through aggregated, de-identified usage analytics.</li>
+              <li>Comply with applicable Indian, EU, and US legal obligations.</li>
             </ul>
 
-            <h3 className="text-xl font-semibold text-gray-900 pt-4">3. How We Share Your Data</h3>
-            <p>We do not sell or rent your personal data. We share data only with:</p>
-            <ul className="list-disc pl-5 space-y-2">
-              <li><strong>Service Providers:</strong> AI processors (OpenAI via OpenRouter), Payment processors (Razorpay), SMS/Email providers, and Cloud hosting providers. All providers are vetted and bound by data protection contracts.</li>
-              <li><strong>Legal Requirements:</strong> If required by Indian law or valid government requests.</li>
-              <li><strong>Business Transfers:</strong> In case of a merger or acquisition, ensuring new owners honor this policy.</li>
-              <li><strong>Protection of Rights:</strong> To enforce terms or protect safety and rights.</li>
+            <h3 className="text-xl font-semibold text-gray-900 pt-4">3. Who we share data with</h3>
+            <p>
+              We do <strong>not</strong> sell or rent your personal data. We do share data with the following categories of processors and providers, each bound by a data-processing agreement:
+            </p>
+            <p className="mt-3">
+              <strong>AI providers (your idea content is sent to these):</strong> When you request idea analysis or a focus-group debate, your idea title, description, and the personas' conversation are routed through OpenRouter, which forwards the request to one of the following Large Language Model providers, depending on availability and the model selected for your tier:
+            </p>
+            <ul className="list-disc pl-5 space-y-1">
+              <li><strong>OpenRouter</strong> — API gateway (<a href="https://openrouter.ai/privacy" className="text-primary hover:underline" target="_blank" rel="noopener noreferrer">privacy policy</a>)</li>
+              <li><strong>OpenAI</strong> — GPT-4o, GPT-4o-mini (<a href="https://openai.com/policies/privacy-policy/" className="text-primary hover:underline" target="_blank" rel="noopener noreferrer">privacy policy</a>; API data is not used for training per OpenAI's published API data-usage policy)</li>
+              <li><strong>Anthropic</strong> — Claude 3.5 Sonnet, Claude Haiku (<a href="https://www.anthropic.com/legal/privacy" className="text-primary hover:underline" target="_blank" rel="noopener noreferrer">privacy policy</a>; API data is not used for training)</li>
+              <li><strong>Google</strong> — Gemini Flash, Gemini Pro (<a href="https://ai.google.dev/gemini-api/terms" className="text-primary hover:underline" target="_blank" rel="noopener noreferrer">terms</a>)</li>
+              <li><strong>Perplexity</strong> — Sonar Pro, Sonar Deep (<a href="https://www.perplexity.ai/hub/legal/privacy-policy" className="text-primary hover:underline" target="_blank" rel="noopener noreferrer">privacy policy</a>)</li>
+              <li><strong>Meta</strong> — Llama 3.3</li>
+              <li><strong>DeepSeek</strong></li>
+              <li><strong>Qwen</strong> — Alibaba Cloud</li>
             </ul>
-
-            <h3 className="text-xl font-semibold text-gray-900 pt-4">4. Data Security</h3>
-            <p>
-              We implement industry-standard security measures including encryption in transit (HTTPS), password hashing, and access controls. While we strive to protect your data, no method is 100% secure.
+            <p className="mt-3">
+              Provider data retention and training policies vary. OpenRouter exposes provider-level data policies and routing controls; where no-training commercial/API settings are available, we configure routing to prefer them. Some providers may retain prompts and responses for abuse detection, safety, or service operations. We verify these policies quarterly and update this list when provider handling changes.
             </p>
-
-            <h3 className="text-xl font-semibold text-gray-900 pt-4">5. Data Retention</h3>
-            <p>
-              We retain your personal information as long as your account exists. If you delete your account, we erase or anonymize your data, except where legally required to be retained.
+            <p className="mt-3">
+              <strong>Search providers (Deep Dive tier only):</strong> If you use the optional web-augmented "Deep Dive" analysis, your search query is sent to Tavily and/or DuckDuckGo to retrieve live market data.
             </p>
-
-            <h3 className="text-xl font-semibold text-gray-900 pt-4">6. Your Rights and Choices</h3>
-            <ul className="list-disc pl-5 space-y-2">
-              <li><strong>Access and Correction:</strong> You can update your profile settings directly.</li>
-              <li><strong>Deletion:</strong> You may request deletion of your personal data or account.</li>
-              <li><strong>Consent Withdrawal:</strong> You can withdraw consent for marketing or optional processing at any time.</li>
-              <li><strong>Grievance and Complaints:</strong> Contact our Grievance Officer for any concerns.</li>
+            <p className="mt-3">
+              <strong>Other processors:</strong>
+            </p>
+            <ul className="list-disc pl-5 space-y-1">
+              <li><strong>Razorpay</strong> — payment processing</li>
+              <li><strong>MSG91 / Twilio</strong> — SMS OTP delivery (when phone login is offered)</li>
+              <li><strong>Railway</strong> — application hosting (data primarily processed in their US region; we are evaluating an India-region option)</li>
+              <li><strong>Sentry</strong> — crash and error reporting (no idea content is sent; only stack traces and session metadata)</li>
+              <li><strong>Apple</strong> — Sign in with Apple authentication; Apple may receive your identifier when you sign in</li>
             </ul>
-
-            <h3 className="text-xl font-semibold text-gray-900 pt-4">7. Cookies and Tracking</h3>
-            <p>
-              We use cookies for essential and functional purposes. See our separate Cookie Policy for details.
+            <p className="mt-3">
+              <strong>Legal disclosures:</strong> We may share data when required by valid Indian law, court order, or a comparable lawful request from another jurisdiction we are subject to.
+            </p>
+            <p className="mt-3">
+              <strong>Business transfers:</strong> If we are acquired or merge with another entity, your data may transfer to the new owner under the same protections.
             </p>
 
-            <h3 className="text-xl font-semibold text-gray-900 pt-4">8. Children’s Privacy</h3>
+            <h3 className="text-xl font-semibold text-gray-900 pt-4">4. Data security</h3>
             <p>
-              AntarangAI is not intended for children under 18. We do not knowingly collect data from minors.
+              We use HTTPS for all data in transit, bcrypt for password hashing, hardware-backed Apple Keychain on iOS for token storage, and access controls and audit logs on production systems. No method is 100% secure; in the event of a data breach we will notify affected users and the relevant authorities as required by the DPDP Act and GDPR.
             </p>
 
-            <h3 className="text-xl font-semibold text-gray-900 pt-4">9. International Data Transfers</h3>
+            <h3 className="text-xl font-semibold text-gray-900 pt-4">5. Data retention</h3>
             <p>
-              We primarily store data in India. Some third-party providers may process data globally with adequate safeguards in place.
+              We retain account information and idea content for as long as your account exists. If you delete your account (see Section 6), we delete or anonymise your personal data within 30 days. Backups containing your data are purged on a rolling 90-day cycle. Logs are retained for 90 days unless required longer for security investigations.
             </p>
 
-            <h3 className="text-xl font-semibold text-gray-900 pt-4">10. Updates to This Policy</h3>
+            <h3 className="text-xl font-semibold text-gray-900 pt-4">6. Your rights and choices</h3>
+            <p>You have the following rights, regardless of where you live:</p>
+            <ul className="list-disc pl-5 space-y-2">
+              <li><strong>Access:</strong> request a copy of the personal data we hold about you.</li>
+              <li><strong>Correction:</strong> update or correct inaccurate data via your profile, or by email request.</li>
+              <li><strong>Deletion / "right to be forgotten":</strong> request deletion of your account and personal data. There is a "Delete Account" option inside the app; alternatively, email us at the address in Section 11.</li>
+              <li><strong>Portability:</strong> request an export of your idea content and analyses in a structured machine-readable format.</li>
+              <li><strong>Withdraw consent:</strong> for any processing where the legal basis is consent, you can withdraw it.</li>
+              <li><strong>Object / restrict:</strong> object to processing for marketing or analytics; restrict processing while a dispute is resolved.</li>
+              <li><strong>EU residents (GDPR):</strong> you may lodge a complaint with your local supervisory authority.</li>
+              <li><strong>California residents (CCPA/CPRA):</strong> you may exercise the right to know, delete, correct, and limit; we do not sell personal information, and we do not engage in "share for cross-context behavioral advertising".</li>
+              <li><strong>India (DPDP Act):</strong> you may contact our Grievance Officer (Section 11) for any concerns; the Officer will respond within the statutory window.</li>
+            </ul>
             <p>
-              We may revise this Privacy Policy. Continued use after changes implies consent.
+              We will respond to verifiable requests within 30 days. Requests must be sent from the email address registered on the account, or otherwise verified.
             </p>
 
-            <h3 className="text-xl font-semibold text-gray-900 pt-4">11. Contact Us</h3>
+            <h3 className="text-xl font-semibold text-gray-900 pt-4">7. Cookies and tracking</h3>
             <p>
-              For questions, contact our Grievance Officer/Privacy Officer at: <a href="mailto:hello@antarangai.in" className="text-primary hover:underline">hello@antarangai.in</a>.
+              The web app uses essential cookies for authentication and functional cookies for user preferences. We do not use third-party advertising or cross-site tracking cookies. See our <a href="/cookies" className="text-primary hover:underline">Cookie Policy</a> for details.
+            </p>
+
+            <h3 className="text-xl font-semibold text-gray-900 pt-4">8. Children's privacy</h3>
+            <p>
+              AntarangAI is intended for users aged 17 and older. We do not knowingly collect personal data from anyone under 17. If you believe a child has provided data to us, contact us and we will delete it.
+            </p>
+
+            <h3 className="text-xl font-semibold text-gray-900 pt-4">9. International data transfers</h3>
+            <p>
+              Some processors (notably the AI providers in Section 3, Sentry, and Railway) operate from outside India. Where data is transferred internationally, we rely on (a) the processor's adequacy under the relevant law, or (b) contractual safeguards such as the EU Standard Contractual Clauses, or (c) explicit consent. By using the Service you acknowledge that your data may be processed in the United States, the European Union, and other regions where our providers are based.
+            </p>
+
+            <h3 className="text-xl font-semibold text-gray-900 pt-4">10. Updates to this policy</h3>
+            <p>
+              We may revise this policy as the product evolves. Material changes — for example, adding a new category of processor — will be announced via in-app notification or email at least 14 days before they take effect. The "Last updated" date at the top of this page reflects the most recent revision. Continued use after the effective date constitutes acceptance.
+            </p>
+
+            <h3 className="text-xl font-semibold text-gray-900 pt-4">11. Contact us</h3>
+            <p>
+              For any privacy concerns, data-subject requests, or to reach our Grievance Officer, email <a href="mailto:privacy@antarang.ai" className="text-primary hover:underline">privacy@antarang.ai</a>. Postal address available on request.
             </p>
           </div>
         </div>
@@ -94,4 +134,3 @@ const Privacy = () => {
 };
 
 export default Privacy;
-
