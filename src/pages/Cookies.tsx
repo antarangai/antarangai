@@ -7,26 +7,26 @@ const Cookies = () => {
       <Navbar />
       <div className="flex-grow pt-32 pb-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-4xl mx-auto">
-          <h1 className="text-4xl font-bold text-gray-900 mb-8">Cookie Policy</h1>
-          
+          <h1 className="text-4xl font-bold text-gray-900 mb-2">Cookie Policy</h1>
+          <p className="text-sm text-gray-500 mb-8">Last updated: 1 June 2026</p>
+
           <div className="prose prose-lg max-w-none text-gray-600 space-y-6">
             <p>
-              This Cookie Policy explains how AntarangAI uses cookies and similar tracking technologies on our website or application. By using our Service, you consent to the use of cookies as described in this policy. If you do not agree, you can disable cookies via your browser settings, but note that some parts of our Service may not function properly without cookies.
+              This Cookie Policy explains how AntarangAI uses cookies and similar tracking technologies on our website (antarang.ai) and web application. By using our Service, you consent to the use of cookies as described in this policy. If you do not agree, you can disable cookies via your browser settings, but note that staying logged in will not work without cookies.
             </p>
 
-            <h3 className="text-xl font-semibold text-gray-900 pt-4">1. What Are Cookies?</h3>
+            <h3 className="text-xl font-semibold text-gray-900 pt-4">1. What are cookies?</h3>
             <p>
-              Cookies are small text files placed on your device (computer or smartphone) when you visit a website. They allow the site to remember your actions or preferences over time. Cookies can be “session” cookies (temporary) or “persistent” cookies (remain until deleted).
+              Cookies are small text files placed on your device when you visit a website. They allow the site to remember your actions or preferences over time. Cookies can be "session" cookies (temporary) or "persistent" cookies (remain until deleted).
             </p>
 
-            <h3 className="text-xl font-semibold text-gray-900 pt-4">2. How We Use Cookies</h3>
-            <p>We use cookies for several essential and functional purposes:</p>
+            <h3 className="text-xl font-semibold text-gray-900 pt-4">2. Cookies we set</h3>
             <ul className="list-disc pl-5 space-y-2">
-              <li><strong>Authentication & Security:</strong> To verify your account and keep you logged in securely.</li>
-              <li><strong>Preferences:</strong> To remember your settings (e.g., language, closed notifications).</li>
-              <li><strong>Analytics & Performance:</strong> To understand usage patterns and improve our features (e.g., aggregated traffic stats).</li>
-              <li><strong>Payment and Integrations:</strong> Third-party services like Razorpay may set cookies to process transactions.</li>
+              <li><strong><code>antarangai_token</code></strong> — essential authentication cookie set by the web app after sign-in. SameSite=Lax; Secure (HTTPS only); 30-day expiry. Required to stay logged in.</li>
             </ul>
+            <p className="mt-2">
+              We do <strong>not</strong> set targeting, advertising, or cross-site tracking cookies. We do not use Google Analytics or similar third-party analytics tags on the marketing site or web app.
+            </p>
             <p className="mt-2">
               Importantly, we do not use targeting or advertising cookies on AntarangAI at this time. You will not receive third-party ads on our platform.
             </p>
